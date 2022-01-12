@@ -1,0 +1,90 @@
+<html>
+  <head>
+     <style>
+      html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family:arial;
+  color: #fff;
+  background: #ccc;
+}
+
+form {
+  background: rgb(0,0,239);
+  padding: 50px;
+  border-radius: 4px;
+}
+
+form div {
+  margin: 20px 0;
+}
+
+label {
+  font-size: 13px;
+  margin-right: 0;
+}
+
+input {
+  display: block;
+  margin-top: 5px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.btn {
+  display:block;
+  margin: 0 auto;
+  
+}
+
+     </style>
+  </head>
+  <body>
+
+  <form action="">
+    <h1>Sign in</h1>
+    <div class="fieldOne">
+      <label>Username</label>
+      <input type="text" id="user-name">
+    </div>
+
+    <!-- <div class="fieldTwo">
+      <label>Password</label>
+      <input type="password" id="pass-word">
+    </div> -->
+
+    <button class="btn" onclick="signIn();">Sign In</button>
+
+    <div id="greeting"></div>
+
+   </form>
+
+
+  <script>
+  
+  function signIn() {
+  "use strict";
+  const userName = "Pexi";
+  
+  let inputOne = document.getElementById("user-name").value;
+    
+  if (inputOne === userName) {
+    document.getElementById("greeting").innerHTML = `Welcome ${userName}!`;
+  } else {
+    document.getElementById("greeting").innerHTML = `Could not recognize you, please try again`;
+  }
+
+}
+  </script>
+
+  </body>
+
+</html>
